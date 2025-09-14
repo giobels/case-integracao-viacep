@@ -1,7 +1,9 @@
 package com.viacep.integracao.domain;
 
+import com.viacep.integracao.domain.valueObject.Cep;
+
 public class Endereco {
-    private String CEP;
+    private Cep cep;
     private String logradouro;
     private String complemento;
     private String bairro;
@@ -9,8 +11,8 @@ public class Endereco {
     private String uf;
 
 
-    public Endereco (String CEP, String logradouro, String complemento, String bairro, String localidade, String uf){
-        this.CEP = CEP;
+    public Endereco (Cep cep, String logradouro, String complemento, String bairro, String localidade, String uf){
+        this.cep = cep;
         this.logradouro = logradouro;
         this.complemento = complemento;
         this.bairro = bairro;
@@ -18,7 +20,7 @@ public class Endereco {
         this.uf = uf;
     }
 
-    public String getCep() { return CEP; }
+    public Cep getCep() { return cep; }
     public String getLogradouro() { return logradouro; }
     public String getComplemento() { return complemento; }
     public String getBairro() { return bairro; }
