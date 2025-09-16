@@ -1,7 +1,7 @@
 package com.viacep.integracao.adapters.dtos;
 
 public record EnderecoResponseDto (
-        String CEP,
+        String cep,
         String logradouro,
         String complemento,
         String bairro,
