@@ -71,7 +71,7 @@ curl http://localhost:8080/enderecos/01001000
 Resposta esperada:
 ```bash
 {
-  "cep": "01001-000",
+  "cep": "01001000",
   "logradouro": "praça da sé",
   "complemento": "lado ímpar",
   "bairro": "Sé",

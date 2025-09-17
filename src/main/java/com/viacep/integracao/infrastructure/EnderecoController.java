@@ -23,10 +23,8 @@ public class EnderecoController {
     @GetMapping("/{cep}")
     public ResponseEntity<EnderecoResponseDto> buscarEnderecoPorCep( @PathVariable String cep) {
        Endereco endereco = buscarEnderecoPorCepUseCase.buscar(new Cep(cep.trim()));
-       StringBuilder cepFormatado = new StringBuilder(endereco.getCep().getValor());
-       cepFormatado.insert(5, '-');
         EnderecoResponseDto responseDto = new EnderecoResponseDto(
-                cepFormatado.toString(),
+                endereco.getCep().toString(),
                 endereco.getLogradouro().toLowerCase(),
                 endereco.getComplemento(),
                 endereco.getBairro(),
